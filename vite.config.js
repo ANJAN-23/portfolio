@@ -5,3 +5,6 @@ export default defineConfig({
   plugins: [react()],
   base: '/portfolio/'  // This ensures GitHub Pages serves files correctly
 })
+export default {
+  base: '/portfolio/'
+}
