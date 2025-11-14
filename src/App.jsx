@@ -27,7 +27,7 @@ export default function App() {
   const isVisible = (id) => visibleSections.includes(id);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-black text-slate-200">
       {/* ---------- Navbar ---------- */}
       <nav className="fixed w-full top-0 z-50 bg-black/40 backdrop-blur-md border-b border-gray-800 text-slate-200">
         <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
@@ -41,7 +41,7 @@ export default function App() {
             <a href="#contact" className="hover:text-emerald-400">Contact</a>
           </div>
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/anjan-saklani-369748327/"
             target="_blank"
             rel="noreferrer"
             className="hidden sm:block bg-emerald-500 hover:bg-emerald-400 text-black font-semibold px-4 py-1.5 rounded-lg transition"
@@ -54,12 +54,26 @@ export default function App() {
       {/* ---------- Hero Section ---------- */}
       <section
         id="hero"
-        className="flex flex-col justify-center items-center min-h-screen text-center fade-in pt-20"
+        className="flex flex-col justify-center items-center min-h-screen text-center fade-in pt-20 px-4"
       >
         <h1 className="text-4xl sm:text-6xl font-bold hero-glow">{NAME}</h1>
         <p className="mt-4 text-lg sm:text-xl text-gray-400 max-w-2xl">
           {TAGLINE}
         </p>
+
+        {/* ---------- LinkedIn Video ---------- */}
+        <div className="mt-6">
+          <iframe
+            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7273242113436213248"
+            height="400"
+            width="600"
+            frameBorder="0"
+            allowFullScreen
+            title="LinkedIn Intro Video"
+            className="rounded-lg shadow-lg max-w-full"
+          ></iframe>
+        </div>
+
         <a
           href="#contact"
           className="mt-6 bg-emerald-500 text-black px-6 py-2 rounded-xl font-semibold hover:bg-emerald-400 transition"
@@ -149,7 +163,7 @@ export default function App() {
       </section>
 
       {/* ---------- Footer ---------- */}
-      <footer className="mt-20 py-6 text-sm text-gray-500 border-t border-gray-800">
+      <footer className="mt-20 py-6 text-sm text-gray-500 border-t border-gray-800 text-center">
         © {new Date().getFullYear()} {NAME}. All rights reserved.
       </footer>
     </div>
